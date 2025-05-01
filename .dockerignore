@@ -24,3 +24,4 @@ LICENSE
 README.md
 !Dockerfile
 **/Dockerfile*
+cloudbuild.yaml
