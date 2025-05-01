@@ -1,6 +1,9 @@
 steps:
 - name: 'gcr.io/cloud-builders/docker'
   args: ['build', '-t', 'europe-docker.pkg.dev/${PROJECT_ID}/europe-docker-images/web-server-nginx-container', '.']
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['push', 'europe-docker.pkg.dev/${PROJECT_ID}/europe-docker-images/web-server-nginx-container']
+
 logsBucket: 'gs://cloud-build-storage-bucket-eu'
 options:
   logging: GCS_ONLY
