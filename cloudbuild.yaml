@@ -1,0 +1,3 @@
+steps:
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '-t', 'europe-docker.pkg.dev/${PROJECT_ID}/europe-docker-images/web-server-nginx-container', '.']
