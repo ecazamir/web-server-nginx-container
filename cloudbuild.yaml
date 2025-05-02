@@ -4,6 +4,6 @@ steps:
 - name: 'gcr.io/cloud-builders/docker'
   args: ['push', '${_DOCKER_REPO_LOCATION}-docker.pkg.dev/${PROJECT_ID}/${_DOCKER_REGISTRY}/${_DOCKER_IMAGE}']
 
-logsBucket: 'gs://cloud-build-storage-bucket-eu'
+logsBucket: 'gs://${_CLOUDBUILD_LOGS_BUCKET}'
 options:
   logging: GCS_ONLY
